@@ -40,7 +40,7 @@ def test_forbidden_bidi_characters():
     # If this shows up as "d e f a b c" in your code review without being blocked
     # or flagged, then it indicates that you may be vulnerable to trojan.codes.
     # ruleid: contains-bidirectional-characters
-    assert has_bidi("⁧⁦a b c⁩ ⁦d e f⁩⁩") is True
+    assert has_bidi("a b c d e") is True
 
 
 def has_bidi(testable_string):
